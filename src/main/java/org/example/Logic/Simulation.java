@@ -24,8 +24,19 @@ public class Simulation {
         map.printMap();
     }
 
-    public void startsSimulation() {
+    public void startsSimulation() throws InterruptedException {
+        while (true) {
+            renderMap();
+            Thread.sleep(3000);
+            nextTurn();
+            clsWindow();
+        }
+    }
 
+    private void clsWindow() {
+        for (int i = 0; i < 100; i++) {
+            System.out.println();
+        }
     }
 
     public void pauseSimulation() {
@@ -33,6 +44,6 @@ public class Simulation {
     }
 
     private void nextTurn() {
-
+        MakeMoveAction.action(map);
     }
 }

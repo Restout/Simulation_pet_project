@@ -22,34 +22,48 @@ public class RenderInteractionalObjectsAction extends Action {
 
     private static void renderGrass(Map map, int squareOfMap) {
         int index;
+        Grass grass;
         for (int i = 0; i < NUMBER_OF_GRASS_OBJECTS; i++) {
             index = random.nextInt(squareOfMap);
             while (map.getMapField(index).getClass() != EmptyField.class) {
                 index = random.nextInt(squareOfMap);
             }
-            map.setMapField(index, new Grass());
+            grass = new Grass();
+            grass.setCurrentPosition(index);
+            map.setMapField(index, grass);
+            map.setMapOfInteractionalObjectsFiled(index, grass);
         }
     }
 
     private static void renderHerbivores(Map map, int squareOfMap) {
         int index;
+        Herbivore herbivore;
         for (int i = 0; i < NUMBER_OF_HERBIVORES_OBJECTS; i++) {
             index = random.nextInt(squareOfMap);
             while (map.getMapField(index).getClass() != EmptyField.class) {
                 index = random.nextInt(squareOfMap);
             }
-            map.setMapField(index, new Herbivore());
+            herbivore = new Herbivore();
+            herbivore.setCurrentPosition(index);
+            map.setMapField(index, herbivore);
+            map.setMapOfInteractionalObjectsFiled(index, herbivore);
+
         }
     }
 
     private static void renderPredators(Map map, int squareOfMap) {
         int index;
+        Predator predator;
         for (int i = 0; i < NUMBER_OF_PREDATORS_OBJECTS; i++) {
             index = random.nextInt(squareOfMap);
             while (map.getMapField(index).getClass() != EmptyField.class) {
                 index = random.nextInt(squareOfMap);
             }
-            map.setMapField(index, new Predator());
+            predator = new Predator();
+            predator.setCurrentPosition(index);
+            map.setMapField(index,predator);
+            map.setMapOfInteractionalObjectsFiled(index, predator);
+
         }
     }
 

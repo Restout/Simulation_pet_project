@@ -1,7 +1,7 @@
 package org.example.Entities;
 
-public interface Interactional {
-    void destroy();
-    void makeMove();
+import org.example.Logic.Map;
 
+public interface Interactional  {
+    void destroy();
 }
