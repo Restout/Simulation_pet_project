@@ -14,10 +14,10 @@ public class Simulation {
         map = new Map();
     }
 
-    public void creatMap(int squareOfMap) {
-        BasicRenderAction.renderMapWithEmptySpaces(map, squareOfMap);
-        RenderStaticObjectsAction.renderMapWithStaticObjects(map, squareOfMap);
-        RenderInteractionalObjectsAction.renderInteractionalObjects(map, squareOfMap);
+    public void creatMap() {
+        BasicRenderAction.action(map);
+        RenderStaticObjectsAction.action(map);
+        RenderInteractionalObjectsAction.action(map);
     }
 
     public void renderMap() {
@@ -25,6 +25,7 @@ public class Simulation {
     }
 
     public void startsSimulation() throws InterruptedException {
+        creatMap();
         while (true) {
             renderMap();
             Thread.sleep(3000);
@@ -34,7 +35,7 @@ public class Simulation {
     }
 
     private void clsWindow() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             System.out.println();
         }
     }

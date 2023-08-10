@@ -10,10 +10,11 @@ import java.util.Random;
 public class RenderStaticObjectsAction extends Action {
     private static final int NUMBER_OF_STATIC_OBJECTS = 16;
 
-    public static void renderMapWithStaticObjects(Map map, int squareOfMap) {
+    public static void action(Map map) {
         Random random = new Random();
         int index;
         Entity entity;
+        int squareOfMap = map.getMap().size();
         for (int i = 0; i < NUMBER_OF_STATIC_OBJECTS; i++) {
             index = random.nextInt(squareOfMap);
             while (map.getMapField(index).getClass() != EmptyField.class) {

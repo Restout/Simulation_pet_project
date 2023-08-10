@@ -9,8 +9,7 @@ import java.util.Random;
 
 public class Herbivore extends Creature {
     public Herbivore() {
-        renderIcon = '@';
-        colour = "\u001B[36m";
+       renderIcon = "\uD83E\uDD86";
     }
 
 
@@ -27,8 +26,6 @@ public class Herbivore extends Creature {
         map.setMapField(currentPosition, new EmptyField());
         map.setMapField(nextPosition, this);
         currentPosition=nextPosition;
-       /* map.setMapOfInteractionalObjectsFiled(nextPosition, this);//переделать
-        map.getMapOfInteractionalObjects().remove(currentPosition);*/
     }
 
     @Override

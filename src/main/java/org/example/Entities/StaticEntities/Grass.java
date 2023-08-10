@@ -5,10 +5,10 @@ import org.example.Entities.Interactional;
 import org.example.Logic.Map;
 
 public class Grass extends Entity implements Interactional {
+    int healthPoints;
     public Grass() {
         healthPoints = 100;
-        renderIcon = '#';
-        colour = "\u001B[33m";
+        renderIcon = "\uD83C\uDF31";
     }
 
 
@@ -22,7 +22,7 @@ public class Grass extends Entity implements Interactional {
             healthPoints += 50;
         }
         if(healthPoints==200){
-            renderIcon='A';
+            renderIcon = "\uD83C\uDF3B";
         }
     }
 

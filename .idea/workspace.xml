@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="firstRenderCreated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/SearchUtilityClass.java" afterDir="false" />
+    <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="MVP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Herbivore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Predator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Interactional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Interactional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Grass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/AttackAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/AttackAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Rock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/BasicRenderAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/BasicRenderAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/MakeMoveAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/MakeMoveAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderInteractionalObjectsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderInteractionalObjectsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderStaticObjectsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderStaticObjectsAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
@@ -63,6 +65,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="MainStart" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="Simulation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,7 +84,7 @@
       <updated>1690961371478</updated>
       <workItem from="1690961372867" duration="2427000" />
       <workItem from="1691327166281" duration="18684000" />
-      <workItem from="1691587935201" duration="17109000" />
+      <workItem from="1691587935201" duration="22433000" />
     </task>
     <task id="LOCAL-00001" summary="firstRenderCreated">
       <created>1691503033157</created>
@@ -82,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691503033157</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="MVP">
+      <created>1691607101193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691607101193</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,13 +136,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="firstRenderCreated" />
-    <option name="LAST_COMMIT_MESSAGE" value="firstRenderCreated" />
+    <MESSAGE value="MVP" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVP" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
         <watch expression="map.get(key)" language="JAVA" />
         <watch expression="map.get(key).getRenderIcon()" language="JAVA" />
+        <watch expression="map.getMap().values()" language="JAVA" />
+        <watch expression="entity" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

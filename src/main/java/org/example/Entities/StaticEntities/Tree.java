@@ -4,9 +4,6 @@ import org.example.Entities.Entity;
 
 public class Tree extends Entity {
     public Tree() {
-        healthPoints = 100;
-        renderIcon = 'T';
-        colour = "\u001B[32m";
-
+        renderIcon = "\uD83C\uDF33";
     }
 }

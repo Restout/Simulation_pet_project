@@ -6,11 +6,13 @@ import org.example.Entities.Interactional;
 import java.util.HashMap;
 
 public class Map {
-    private final HashMap<Integer, Entity> map = new HashMap();
+    private final HashMap<Integer, Entity> map = new HashMap(64);
     private final HashMap<Integer, Interactional> mapOfInteractionalObjects = new HashMap<>();
 
     public Map() {
-
+for(int i=0;i<64;i++){
+    map.put(i,null);
+}
     }
 
     public void setMapField(int filedIndex, Entity value) {
@@ -40,7 +42,7 @@ public class Map {
             if (key % mapEdge == 0) {
                 System.out.println();
             }
-            System.out.print(" " + map.get(key).getColour() + map.get(key).getRenderIcon());
+            System.out.print(map.get(key).getRenderIcon()+" ");
         }
     }
 

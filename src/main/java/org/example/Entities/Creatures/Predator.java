@@ -8,12 +8,8 @@ import java.util.List;
 import java.util.Random;
 
 public class Predator extends Creature {
-    private final int attackDamage = 25;
-
     public Predator() {
-        renderIcon = '&';
-        colour = "\u001B[31m";
-
+        renderIcon = "\uD83E\uDD8A";
     }
 
     @Override
@@ -29,8 +25,6 @@ public class Predator extends Creature {
         map.setMapField(currentPosition, new EmptyField());
         map.setMapField(nextPosition, this);
         currentPosition = nextPosition;
-       /* map.setMapOfInteractionalObjectsFiled(nextPosition, this);//переделать
-        map.getMapOfInteractionalObjects().remove(currentPosition);*/
     }
 
     @Override
