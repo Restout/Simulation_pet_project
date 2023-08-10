@@ -7,11 +7,12 @@ import java.util.List;
 
 public class Simulation {
     private Map map;
+    private boolean pause = false;
     List<Action> initActions = Arrays.asList(new BasicRenderAction(), new RenderStaticObjectsAction(), new RenderInteractionalObjectsAction());
     List<Action> inTurnActions = Arrays.asList(new MakeMoveAction(), new AttackAction());
 
-    public Simulation() {
-        map = new Map();
+    public Simulation(int sizeOfMap) {
+        map = new Map(sizeOfMap);
     }
 
     public void creatMap() {
@@ -41,7 +42,12 @@ public class Simulation {
     }
 
     public void pauseSimulation() {
-
+        pause=true;
+        //TODO
+    }
+    public void continueSimulation() {
+        pause=false;
+        //TODO
     }
 
     private void nextTurn() {

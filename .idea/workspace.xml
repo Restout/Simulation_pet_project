@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="MVP">
+    <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="MVP2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Herbivore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Predator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Grass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Rock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/StaticEntities/Tree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/BasicRenderAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/BasicRenderAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/MakeMoveAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/MakeMoveAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderInteractionalObjectsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderInteractionalObjectsAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderStaticObjectsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/RenderStaticObjectsAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
@@ -84,7 +74,7 @@
       <updated>1690961371478</updated>
       <workItem from="1690961372867" duration="2427000" />
       <workItem from="1691327166281" duration="18684000" />
-      <workItem from="1691587935201" duration="22433000" />
+      <workItem from="1691587935201" duration="23418000" />
     </task>
     <task id="LOCAL-00001" summary="firstRenderCreated">
       <created>1691503033157</created>
@@ -100,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691607101193</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="MVP2">
+      <created>1691667615832</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691667615832</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +134,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="firstRenderCreated" />
     <MESSAGE value="MVP" />
-    <option name="LAST_COMMIT_MESSAGE" value="MVP" />
+    <MESSAGE value="MVP2" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVP2" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

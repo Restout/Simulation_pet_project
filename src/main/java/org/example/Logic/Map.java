@@ -9,8 +9,8 @@ public class Map {
     private final HashMap<Integer, Entity> map = new HashMap(64);
     private final HashMap<Integer, Interactional> mapOfInteractionalObjects = new HashMap<>();
 
-    public Map() {
-for(int i=0;i<64;i++){
+    public Map(int size) {
+for(int i=0;i<size;i++){
     map.put(i,null);
 }
     }
