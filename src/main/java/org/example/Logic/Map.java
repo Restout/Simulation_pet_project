@@ -1,14 +1,11 @@
 package org.example.Logic;
 
 import org.example.Entities.Entity;
-import org.example.Entities.Interactional;
 
 import java.util.HashMap;
 
 public class Map {
     private final HashMap<Integer, Entity> map = new HashMap(64);
-    private final HashMap<Integer, Interactional> mapOfInteractionalObjects = new HashMap<>();
-
     public Map(int size) {
 for(int i=0;i<size;i++){
     map.put(i,null);
@@ -19,16 +16,8 @@ for(int i=0;i<size;i++){
         map.put(filedIndex, value);
     }
 
-    public void setMapOfInteractionalObjectsFiled(int filedIndex, Interactional value) {
-        mapOfInteractionalObjects.put(filedIndex, value);
-    }
-
     public Entity getMapField(int filedIndex) {
-        return map.get(filedIndex);
-    }
-
-    public HashMap<Integer, Interactional> getMapOfInteractionalObjects() {
-        return mapOfInteractionalObjects;
+                    return map.get(filedIndex);
     }
 
     public HashMap<Integer, Entity> getMap() {

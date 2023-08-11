@@ -6,10 +6,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Simulation {
-    private Map map;
+    private final Map map;
     private boolean pause = false;
     List<Action> initActions = Arrays.asList(new BasicRenderAction(), new RenderStaticObjectsAction(), new RenderInteractionalObjectsAction());
-    List<Action> inTurnActions = Arrays.asList(new MakeMoveAction(), new AttackAction());
+    List<Action> inTurnActions = Arrays.asList(new MakeMoveAction());
 
     public Simulation(int sizeOfMap) {
         map = new Map(sizeOfMap);
@@ -29,7 +29,7 @@ public class Simulation {
         creatMap();
         while (true) {
             renderMap();
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             nextTurn();
             clsWindow();
         }

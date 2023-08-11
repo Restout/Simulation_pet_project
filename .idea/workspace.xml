@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="MVP2">
+    <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="Refactore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/BFSearchUtilityClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Herbivore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Creatures/Predator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entities/Interactional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entities/Interactional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Actions/AttackAction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Logic/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Logic/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
@@ -25,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -74,7 +83,8 @@
       <updated>1690961371478</updated>
       <workItem from="1690961372867" duration="2427000" />
       <workItem from="1691327166281" duration="18684000" />
-      <workItem from="1691587935201" duration="23418000" />
+      <workItem from="1691587935201" duration="32264000" />
+      <workItem from="1691747364530" duration="6214000" />
     </task>
     <task id="LOCAL-00001" summary="firstRenderCreated">
       <created>1691503033157</created>
@@ -97,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691667615832</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactore">
+      <created>1691668760103</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691668760103</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +136,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="WidthSearch" />
                       </list>
                     </value>
                   </entry>
@@ -135,13 +152,12 @@
     <MESSAGE value="firstRenderCreated" />
     <MESSAGE value="MVP" />
     <MESSAGE value="MVP2" />
-    <option name="LAST_COMMIT_MESSAGE" value="MVP2" />
+    <MESSAGE value="Refactore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactore" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
-        <watch expression="map.get(key)" language="JAVA" />
-        <watch expression="map.get(key).getRenderIcon()" language="JAVA" />
         <watch expression="map.getMap().values()" language="JAVA" />
         <watch expression="entity" language="JAVA" />
       </configuration>

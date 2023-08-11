@@ -1,27 +1,32 @@
 package org.example.Entities.Creatures;
 
 import org.example.Entities.StaticEntities.EmptyField;
+import org.example.Logic.BFSearchUtilityClass;
 import org.example.Logic.Map;
-import org.example.Logic.SearchUtilityClass;
 
-import java.util.List;
-import java.util.Random;
+import java.util.Optional;
+import java.util.Stack;
 
 public class Predator extends Creature {
+    Stack<Integer> path;
     public Predator() {
         renderIcon = "\uD83E\uDD8A";
     }
 
     @Override
     public void makeMove(Map map) {
-        SearchUtilityClass searchUtilityClass;
-        Random random = new Random();
-        searchUtilityClass = new SearchUtilityClass(map, this);
-        List<Integer> mostValuableMoves = searchUtilityClass.findMostValuableMoves();
-        if (mostValuableMoves.isEmpty()) {
-            return;
+        BFSearchUtilityClass searchUtilityClass = new BFSearchUtilityClass(map);
+        Optional<Integer> animalNear;
+        if (path == null || path.isEmpty()) {
+            path = searchUtilityClass.findBestPathBFS(this, Herbivore.class);
         }
-        int nextPosition = mostValuableMoves.get(random.nextInt(mostValuableMoves.size()));
+        if (!map.getMapField(path.peek()).getClass().equals(EmptyField.class) && !map.getMapField(path.peek()).getClass().equals(Herbivore.class)) {
+            path.clear();
+            path.add(searchUtilityClass.getEmptyFields(currentPosition).stream().toList().get(0));
+        }
+        animalNear = searchUtilityClass.isClassNear(currentPosition, Herbivore.class);
+        animalNear.ifPresent(integer -> path.add(integer));
+        int nextPosition = path.pop();
         map.setMapField(currentPosition, new EmptyField());
         map.setMapField(nextPosition, this);
         currentPosition = nextPosition;
