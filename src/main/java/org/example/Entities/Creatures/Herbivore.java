@@ -21,6 +21,9 @@ public class Herbivore extends Creature {
         Optional<Integer> grassNear;
         if (path == null || path.isEmpty()) {
             path = searchUtilityClass.findBestPathBFS(this, Grass.class);
+            if(path.isEmpty()){
+                return;
+            }
         }
         if (!map.getMapField(path.peek()).getClass().equals(EmptyField.class) && !map.getMapField(path.peek()).getClass().equals(Grass.class)) {
             path.clear();
@@ -35,10 +38,5 @@ public class Herbivore extends Creature {
         map.setMapField(nextPosition, this);
         currentPosition = nextPosition;
 
-    }
-
-    @Override
-    public void destroy() {
-//TODO impl
     }
 }

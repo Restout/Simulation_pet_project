@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MakeMoveAction extends Action {
-    public static void action(Map map) {
-        List<Entity> madeMove=new ArrayList<>();//переделать в трисет
+    public void action(Map map) {
+        List<Entity> madeMove = new ArrayList<>();//переделать в трисет
         for (Entity entity : map.getMap().values()) {
-            if(!madeMove.contains(entity)) {
+            if (!madeMove.contains(entity)) {
                 entity.makeMove(map);
                 madeMove.add(entity);
             }

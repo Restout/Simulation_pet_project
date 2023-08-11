@@ -15,7 +15,7 @@ public class RenderInteractionalObjectsAction extends Action {
     private static final int NUMBER_OF_PREDATORS_OBJECTS = 4;
     private static final int NUMBER_OF_GRASS_OBJECTS = 8;
 
-    public static void action(Map map) {
+    public void action(Map map) {
         renderGrass(map);
         renderHerbivores(map);
         renderPredators(map);

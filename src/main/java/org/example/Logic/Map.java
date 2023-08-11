@@ -7,9 +7,9 @@ import java.util.HashMap;
 public class Map {
     private final HashMap<Integer, Entity> map = new HashMap(64);
     public Map(int size) {
-for(int i=0;i<size;i++){
-    map.put(i,null);
-}
+   for (int i = 0; i < size; i++) {
+       map.put(i, null);
+   }
     }
 
     public void setMapField(int filedIndex, Entity value) {

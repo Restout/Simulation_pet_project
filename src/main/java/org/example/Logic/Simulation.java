@@ -5,9 +5,9 @@ import org.example.Logic.Actions.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class Simulation {
+public class Simulation extends Thread {
     private final Map map;
-    private boolean pause = false;
+    private boolean isMapCreated = false;
     List<Action> initActions = Arrays.asList(new BasicRenderAction(), new RenderStaticObjectsAction(), new RenderInteractionalObjectsAction());
     List<Action> inTurnActions = Arrays.asList(new MakeMoveAction());
 
@@ -16,20 +16,28 @@ public class Simulation {
     }
 
     public void creatMap() {
-        BasicRenderAction.action(map);
-        RenderStaticObjectsAction.action(map);
-        RenderInteractionalObjectsAction.action(map);
+        for (Action action : initActions) {
+            action.action(map);
+        }
     }
 
     public void renderMap() {
         map.printMap();
     }
 
-    public void startsSimulation() throws InterruptedException {
-        creatMap();
+    @Override
+    public void run() {
+        if (!isMapCreated) {
+            creatMap();
+            isMapCreated = true;
+        }
         while (true) {
             renderMap();
-            Thread.sleep(1000);
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
             nextTurn();
             clsWindow();
         }
@@ -41,16 +49,18 @@ public class Simulation {
         }
     }
 
-    public void pauseSimulation() {
-        pause=true;
-        //TODO
-    }
-    public void continueSimulation() {
-        pause=false;
+    public void pauseSimulation() throws InterruptedException {
+        this.wait();
         //TODO
     }
 
+    public void continueSimulation() {
+        this.notify();
+    }
+
     private void nextTurn() {
-        MakeMoveAction.action(map);
+        for (Action action : inTurnActions) {
+            action.action(map);
+        }
     }
 }

@@ -1,10 +1,9 @@
 package org.example.Entities.StaticEntities;
 
 import org.example.Entities.Entity;
-import org.example.Entities.Interactional;
 import org.example.Logic.Map;
 
-public class Grass extends Entity implements Interactional {
+public class Grass extends Entity {
     int healthPoints;
     public Grass() {
         healthPoints = 100;
@@ -24,10 +23,5 @@ public class Grass extends Entity implements Interactional {
         if(healthPoints==200){
             renderIcon = "\uD83C\uDF3B";
         }
-    }
-
-    @Override
-    public void destroy() {
-//TODO impl
     }
 }

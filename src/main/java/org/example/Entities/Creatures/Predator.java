@@ -12,7 +12,6 @@ public class Predator extends Creature {
     public Predator() {
         renderIcon = "\uD83E\uDD8A";
     }
-
     @Override
     public void makeMove(Map map) {
         BFSearchUtilityClass searchUtilityClass = new BFSearchUtilityClass(map);
@@ -30,10 +29,5 @@ public class Predator extends Creature {
         map.setMapField(currentPosition, new EmptyField());
         map.setMapField(nextPosition, this);
         currentPosition = nextPosition;
-    }
-
-    @Override
-    public void destroy() {
-//TODO impl
     }
 }
