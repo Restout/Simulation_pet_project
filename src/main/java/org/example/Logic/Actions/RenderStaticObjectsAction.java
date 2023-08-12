@@ -8,7 +8,7 @@ import org.example.Logic.StaticObjectsFabric;
 import java.util.Random;
 
 public class RenderStaticObjectsAction extends Action {
-    private static final int NUMBER_OF_STATIC_OBJECTS = 16;
+    private static final int NUMBER_OF_STATIC_OBJECTS = 32;
 
     public void action(Map map) {
         Random random = new Random();

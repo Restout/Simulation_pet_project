@@ -6,5 +6,5 @@ public abstract class Action {
     public void action(Map map) {
     }
 
-    ;
+
 }

@@ -15,7 +15,7 @@ public class Predator extends Creature {
     @Override
     public void makeMove(Map map) {
         BFSearchUtilityClass searchUtilityClass = new BFSearchUtilityClass(map);
-        Optional<Integer> animalNear;
+        Optional<Integer> herbivoreNear;
         if (path == null || path.isEmpty()) {
             path = searchUtilityClass.findBestPathBFS(this, Herbivore.class);
         }
@@ -23,8 +23,8 @@ public class Predator extends Creature {
             path.clear();
             path.add(searchUtilityClass.getEmptyFields(currentPosition).stream().toList().get(0));
         }
-        animalNear = searchUtilityClass.isClassNear(currentPosition, Herbivore.class);
-        animalNear.ifPresent(integer -> path.add(integer));
+        herbivoreNear = searchUtilityClass.isClassNear(currentPosition, Herbivore.class);
+        herbivoreNear.ifPresent(integer -> path.add(integer));
         int nextPosition = path.pop();
         map.setMapField(currentPosition, new EmptyField());
         map.setMapField(nextPosition, this);

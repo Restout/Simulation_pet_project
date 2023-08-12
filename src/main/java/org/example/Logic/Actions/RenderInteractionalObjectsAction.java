@@ -11,9 +11,9 @@ import java.util.Random;
 
 public class RenderInteractionalObjectsAction extends Action {
     private final static Random random = new Random();
-    private static final int NUMBER_OF_HERBIVORES_OBJECTS = 4;
-    private static final int NUMBER_OF_PREDATORS_OBJECTS = 4;
-    private static final int NUMBER_OF_GRASS_OBJECTS = 8;
+    private static final int NUMBER_OF_HERBIVORES_OBJECTS = 8;
+    private static final int NUMBER_OF_PREDATORS_OBJECTS = 2;
+    private static final int NUMBER_OF_GRASS_OBJECTS = 16;
 
     public void action(Map map) {
         renderGrass(map);

@@ -9,12 +9,6 @@ public class Grass extends Entity {
         healthPoints = 100;
         renderIcon = "\uD83C\uDF31";
     }
-
-
-    public boolean canBeEaten() {
-        return healthPoints == 200;
-    }
-
     @Override
     public void makeMove(Map map) {
         if (healthPoints != 200) {

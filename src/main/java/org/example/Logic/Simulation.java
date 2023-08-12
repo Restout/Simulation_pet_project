@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Simulation extends Thread {
     private final Map map;
-    private boolean isMapCreated = false;
+    private boolean paused = false;
     List<Action> initActions = Arrays.asList(new BasicRenderAction(), new RenderStaticObjectsAction(), new RenderInteractionalObjectsAction());
     List<Action> inTurnActions = Arrays.asList(new MakeMoveAction());
 
@@ -27,14 +27,11 @@ public class Simulation extends Thread {
 
     @Override
     public void run() {
-        if (!isMapCreated) {
-            creatMap();
-            isMapCreated = true;
-        }
-        while (true) {
+        creatMap();
+        while (!paused) {
             renderMap();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1500);
             } catch (Exception e) {
                 System.out.println(e);
             }
@@ -49,13 +46,14 @@ public class Simulation extends Thread {
         }
     }
 
-    public void pauseSimulation() throws InterruptedException {
-        this.wait();
-        //TODO
+    public void pauseSimulation() {
+        paused = true;
     }
 
-    public void continueSimulation() {
-        this.notify();
+    public void startSimulation() {
+        paused = false;
+        this.start();
+
     }
 
     private void nextTurn() {

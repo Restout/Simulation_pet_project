@@ -69,13 +69,25 @@ public class BFSearchUtilityClass {
     private Stream<Integer> getAvailableFields(int currentPosition) {
         int size = map.getMap().size();
         int mapWidth = (int) Math.sqrt(size);
-        return Stream.of(currentPosition + 1,
-                currentPosition - 1,
-                currentPosition + mapWidth,
-                currentPosition - mapWidth,
-                currentPosition + 1 + mapWidth,
-                currentPosition + 1 - mapWidth,
-                currentPosition - 1 + mapWidth,
-                currentPosition - 1 - mapWidth);
+        int y = currentPosition / mapWidth;
+        List<Integer> listOfValues = new ArrayList<>(Arrays.asList(currentPosition + mapWidth,
+                currentPosition - mapWidth));
+        if ((currentPosition - 1) / mapWidth != y) {
+            listOfValues.addAll(Arrays.asList(currentPosition + 1,
+                    currentPosition + 1 + mapWidth,
+                    currentPosition + 1 - mapWidth));
+        } else if ((currentPosition + 1) / mapWidth != y) {
+            listOfValues.addAll(Arrays.asList(currentPosition - 1,
+                    currentPosition - 1 + mapWidth,
+                    currentPosition - 1 - mapWidth));
+        } else {
+            listOfValues.addAll(Arrays.asList(currentPosition + 1,
+                    currentPosition - 1,
+                    currentPosition + 1 + mapWidth,
+                    currentPosition + 1 - mapWidth,
+                    currentPosition - 1 + mapWidth,
+                    currentPosition - 1 - mapWidth));
+        }
+        return listOfValues.stream();
     }
 }
