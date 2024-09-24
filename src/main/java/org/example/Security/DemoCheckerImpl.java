@@ -21,18 +21,16 @@ public class DemoCheckerImpl implements DemoChecker {
     public boolean checkNumberOfGamesAvailable() {
         int games = demoFileManager.getNumberOfAvailableGames();
 
-        // Проводим отвлекающую проверку для создания задержки
-        fakeCheck();
-
+        fakeCheck();// Проводим отвлекающую проверку для создания задержки
         if (games >= MAX_LAUNCHES) {
             System.out.println("Application has been launched too many times.");
+            System.out.println(games);
             System.exit(0);
             return false;
         }
 
+        distract();// Отвлекающие действия
         increaseGamesAndSave(games);
-        // Отвлекающие действия
-        distract();
 
         return true;
     }
@@ -44,13 +42,11 @@ public class DemoCheckerImpl implements DemoChecker {
     }
 
     public void fakeCheck() {
-        // Пустая отвлекающая функция
         String fakeString = "Check123";
         System.out.println(fakeString.hashCode());
     }
 
     private void distract() {
-        // Используем просто случайные данные и ненужные проверки
         Random random = new Random();
         int distractor = random.nextInt(1000);
         if (distractor % 2 == 0) {

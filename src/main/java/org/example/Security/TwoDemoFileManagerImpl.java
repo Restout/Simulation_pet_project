@@ -2,13 +2,14 @@ package org.example.Security;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static org.example.Security.EncryptionUtils.*;
 
 public class TwoDemoFileManagerImpl implements DemoFileManager {
-    private final static String FILE_PATH1 = decryptPath("aGVsbG8vdXNlci9kYXRhL2ZpbGUxLmRhdGE=");
-    private final static String FILE_PATH2 = decryptPath("aGVsbG8vdXNlci9kYXRhL2ZpbGUyLmRhdGE=");
+    private final static String FILE_PATH1 = decryptPath("QzpcUHJvZ3JhbURhdGFcc2ltXGZpbGUxLnR4dA==");
+    private final static String FILE_PATH2 = decryptPath("QzpcUHJvZ3JhbURhdGFcYWRhdFxmaWxlMi50eHQ=");
 
     @Override
     public int getNumberOfAvailableGames() {
@@ -37,11 +38,22 @@ public class TwoDemoFileManagerImpl implements DemoFileManager {
 
     private int parseFileForAvailableGamesCount(String filePath) {
         try {
-            byte[] encryptedData;
-            encryptedData = Files.readAllBytes(Paths.get(filePath));
+            Path path = Paths.get(filePath);
+            if (!Files.exists(path)) {
+                path.toFile().getParentFile().mkdirs();
+
+                String encryptedData = encryptData(Integer.toString(0));
+                Files.write(path, encryptedData.getBytes());
+                return 0;
+            }
+
+            // Если файл существует, читаем и расшифровываем данные
+            byte[] encryptedData = Files.readAllBytes(path);
             String decryptedData = decryptData(new String(encryptedData));
             return Integer.parseInt(decryptedData);
+
         } catch (IOException e) {
+            e.printStackTrace();
             throw new RuntimeException("Exception during file parsing");
         }
     }
