@@ -1,6 +1,8 @@
 package org.example.Security;
 
 
+import org.example.Logic.Simulation;
+
 import java.util.Random;
 
 public class DemoCheckerImpl implements DemoChecker {
@@ -23,6 +25,7 @@ public class DemoCheckerImpl implements DemoChecker {
 
         fakeCheck();// Проводим отвлекающую проверку для создания задержки
         if (games >= MAX_LAUNCHES) {
+            fakeStart();
             System.out.println("Application has been launched too many times.");
             System.out.println(games);
             System.exit(0);
@@ -44,6 +47,11 @@ public class DemoCheckerImpl implements DemoChecker {
     public void fakeCheck() {
         String fakeString = "Check123";
         System.out.println(fakeString.hashCode());
+    }
+
+    private void fakeStart() {
+        Simulation simulation = new Simulation(0);
+        simulation.startSimulation();
     }
 
     private void distract() {

@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8fbae94-2e8f-452c-aaa6-854059d480ef" name="Changes" comment="Добавил ограничение на колво запусков">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Security/DemoCheckerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Security/DemoCheckerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Security/EncryptionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Security/EncryptionUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Security/TwoDemoFileManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Security/TwoDemoFileManagerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,27 +41,27 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LaunchControll.executor": "Debug",
-    "Application.MainStart.executor": "Run",
-    "Maven.Simulation [clean].executor": "Run",
-    "Maven.Simulation [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LaunchControll.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.MainStart.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Simulation [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Simulation [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.MainStart">
     <configuration name="LaunchControll" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Security.LaunchControll" />
@@ -114,7 +111,8 @@
       <workItem from="1691825122615" duration="3751000" />
       <workItem from="1726931681409" duration="11261000" />
       <workItem from="1727047788658" duration="2941000" />
-      <workItem from="1727136296807" duration="3550000" />
+      <workItem from="1727136296807" duration="6117000" />
+      <workItem from="1727526352969" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="firstRenderCreated">
       <created>1691503033157</created>
@@ -166,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727000813383</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил ограничение на колво запусков">
+      <option name="closed" value="true" />
+      <created>1727140541283</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727140541283</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
